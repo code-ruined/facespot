@@ -36,7 +36,7 @@ class App extends Component {
             input: "",
             imageUrl: "",
             box: {},
-            route: "home",
+            route: "signin",
             isSignedIn: false,
             user: {
                 id: "",
@@ -164,7 +164,7 @@ class App extends Component {
                         />
                         <FaceRecognition box={box} imageUrl={imageUrl} />
                     </div>
-                ) : route === "signin" ? (
+                ) : route === "signin" || route === "signout" ? (
                     <Signin
                         loadUser={this.loadUser}
                         onRouteChange={this.onRouteChange}
